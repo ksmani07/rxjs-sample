@@ -1,0 +1,22 @@
+<p>parent works!</p>
+
+<h2>User form</h2>
+
+<input type="text" placeholder="name" name="name" [(ngModel)]="userForm.name">
+<br>
+<br>
+<input type="email" placeholder="email" name="email" [(ngModel)]="userForm.email">
+<br>
+<br>
+<button type="submit" (click)="onSubmit()"> {{!isUserEdit ? 'Submit': 'Update'}}</button>
+
+<app-child [userCount]="userCount" [users]="users" [users$]="users$" (userEmit)="onEdit($event)"></app-child>
+
+ 
+<br>
+<br>
+<br>
+<input type="text"  name="searchField"  ngModel (ngModelChange)="search(searchData.value)" #searchData>
+
+
+

@@ -1,0 +1,21 @@
+<p>child works!</p>
+
+<!-- {{users | json}} -->
+
+<table style="width: 100%;">
+
+    <tr>
+        <th>sl.no</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th></th>
+    </tr>
+
+    <tr *ngFor="let user of users;let i=index">
+        <td>{{i}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td><button (click)="onEdit(user)">edit</button></td>
+    </tr>
+
+</table>
